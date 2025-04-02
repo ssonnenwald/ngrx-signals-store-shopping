@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-signal-store-shopping": {
+    "ngrx-signals-store-shopping": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngrx-signal-store-shopping",
+            "outputPath": "dist/ngrx-signals-store-shopping",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ngrx-signal-store-shopping:build:production"
+              "buildTarget": "ngrx-signals-store-shopping:build:production"
             },
             "development": {
-              "buildTarget": "ngrx-signal-store-shopping:build:development"
+              "buildTarget": "ngrx-signals-store-shopping:build:development"
             }
           },
           "defaultConfiguration": "development"
