@@ -11,6 +11,8 @@
     />
   </mat-card-title-group>
   <mat-card-actions>
-    <button mat-flat-button>Remove from Cart</button>
+    <button mat-flat-button (click)="store.toggleInCart(item(), false)">
+      Remove from Cart
+    </button>
   </mat-card-actions>
 </mat-card>

@@ -1,8 +1,9 @@
 import { CurrencyPipe, NgOptimizedImage } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { Item } from '../../models/item';
+import { AppStore } from '../../state/store';
 
 @Component({
   selector: 'app-cart-item',
@@ -12,4 +13,6 @@ import { Item } from '../../models/item';
 })
 export class CartItemComponent {
   public item = input.required<Item>();
+
+  public store = inject(AppStore);
 }
