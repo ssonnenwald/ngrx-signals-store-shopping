@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ item().name }}</mat-card-title>
+    <mat-card-subtitle>{{ item().price | currency }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img
+    [ngSrc]="'assets/images/' + item().image"
+    mat-card-image
+    width="400"
+    height="400"
+  />
+
+  <mat-card-actions>
+    @if (!item().inCart) {
+    <button (click)="store.toggleInCart(item(), true)" mat-raised-button>
+      Add to Cart
+    </button>
+    } @else {
+    <button (click)="store.toggleInCart(item(), false)" mat-flat-button>
+      Remove from Cart
+    </button>
+    }
+  </mat-card-actions>
+</mat-card>

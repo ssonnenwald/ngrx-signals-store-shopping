@@ -1,0 +1,9 @@
+mat-card {
+  width: 100%;
+}
+
+mat-card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--mdc-outlined-card-container-shape);
+}

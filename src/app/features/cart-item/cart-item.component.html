@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title>{{ item().name }}</mat-card-title>
+    <mat-card-subtitle>{{ item().price | currency }}</mat-card-subtitle>
+    <img
+      mat-card-image-sm
+      [ngSrc]="'assets/images/' + item().image"
+      mat-card-image
+      width="75"
+      height="75"
+    />
+  </mat-card-title-group>
+  <mat-card-actions>
+    <button mat-flat-button>Remove from Cart</button>
+  </mat-card-actions>
+</mat-card>

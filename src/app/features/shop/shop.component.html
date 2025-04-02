@@ -1,0 +1,8 @@
+<h3 class="mb-4">Shop Page</h3>
+<section class="items">
+  @if (status() === 'loading') {
+  <p>Loading...</p>
+  } @for(item of items(); track $index) {
+  <app-shop-item [item]="item" />
+  }
+</section>

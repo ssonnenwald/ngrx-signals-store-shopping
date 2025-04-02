@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <div class="left">
+    <h3>Demo Shop</h3>
+    <a mat-button routerLink="/"> Store </a>
+  </div>
+  <div class="right">
+    <div class="d-flex justify-content-start align-items-center">
+      <a mat-icon-button routerLink="/cart">
+        <mat-icon [matBadge]="store.totalItemsInCart()">shopping_cart</mat-icon>
+      </a>
+      <mat-icon class="me-1">account_circles</mat-icon>
+      <span>{{ username }}</span>
+    </div>
+  </div>
+</mat-toolbar>
