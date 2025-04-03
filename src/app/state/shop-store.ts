@@ -48,6 +48,9 @@ export function withShopItems<_>() {
           updateEntity({ id: itemToUpdate.id, changes: { inCart: addToCart } })
         );
       },
+      checkout() {
+        store.itemsInCart().forEach((item) => this.toggleInCart(item, false));
+      },
       loadData: rxMethod<void>(
         pipe(
           switchMap(() => api.load()),

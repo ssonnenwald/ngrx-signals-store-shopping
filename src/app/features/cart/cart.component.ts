@@ -12,4 +12,8 @@ import { AppStore } from '../../state/store';
 })
 export class CartComponent {
   public store = inject(AppStore);
+
+  public checkOut(): void {
+    this.store.checkout();
+  }
 }

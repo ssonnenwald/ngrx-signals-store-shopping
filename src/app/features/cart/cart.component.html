@@ -1,7 +1,7 @@
 <h3>Cart Page</h3>
 @for (item of store.itemsInCart(); track $index) {
 <app-cart-item [item]="item" />
-} @if (true) {
-<h3>Total: {{ 0 | currency }}</h3>
-<button mat-raised-button>Check Out</button>
+} @if (store.totalItemsInCart()) {
+<h3>Total: {{ store.totalPrice() | currency }}</h3>
+<button mat-raised-button (click)="checkOut()">Check Out</button>
 }
