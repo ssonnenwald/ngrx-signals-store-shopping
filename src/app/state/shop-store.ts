@@ -9,6 +9,7 @@ import {
 } from '@ngrx/signals';
 import {
   setEntities,
+  updateEntities,
   updateEntity,
   withEntities,
 } from '@ngrx/signals/entities';
@@ -49,7 +50,13 @@ export function withShopItems<_>() {
         );
       },
       checkout() {
-        store.itemsInCart().forEach((item) => this.toggleInCart(item, false));
+        patchState(
+          store,
+          updateEntities({
+            predicate: (item) => item.inCart === true,
+            changes: { inCart: false },
+          })
+        );
       },
       loadData: rxMethod<void>(
         pipe(
