@@ -31,8 +31,13 @@ html {
 
 html,
 body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
   height: 100%;
+  background-color: #212121;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;

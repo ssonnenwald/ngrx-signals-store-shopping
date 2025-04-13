@@ -1,13 +1,19 @@
-.content {
+:host {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding-top: 32px; /* Adjust this depending on the height of the toolbar */
-  padding-right: 32px;
-  padding-left: 32px;
-  padding-bottom: 32px;
-  min-height: calc(100vh - 128px);
-  background-color: var(--mat-sys-background);
-  color: var(--mat-sys-on-background);
-  overflow: auto;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding-top: 32px; /* Adjust this depending on the height of the toolbar */
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 32px;
+    min-height: calc(100vh - 128px);
+    background-color: var(--mat-sys-background);
+    color: var(--mat-sys-on-background);
+    overflow: auto;
+  }
 }
